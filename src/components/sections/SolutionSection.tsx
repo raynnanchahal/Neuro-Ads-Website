@@ -37,21 +37,21 @@ const SolutionSection = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <div 
                   key={index}
-                  className="p-6 rounded-lg bg-card border border-border hover:border-accent/50 transition-all duration-300 hover:scale-105 card-shadow"
+                  className="p-3 sm:p-6 rounded-lg bg-card border border-border hover:border-accent/50 transition-all duration-300 hover:scale-105 card-shadow"
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="p-3 rounded-full bg-accent/10 mb-4">
-                      <Icon className="h-6 w-6 text-accent" />
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/10 mb-3 sm:mb-4">
+                      <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-accent" />
                     </div>
-                    <h3 className="font-bold text-lg mb-2">{service.title}</h3>
-                    <p className="text-foreground/70 text-sm">{service.desc}</p>
+                    <h3 className="font-bold text-sm sm:text-lg mb-1 sm:mb-2">{service.title}</h3>
+                    <p className="text-foreground/80 text-xs sm:text-sm leading-tight">{service.desc}</p>
                   </div>
                 </div>
               );

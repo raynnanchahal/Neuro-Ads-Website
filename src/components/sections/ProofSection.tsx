@@ -4,18 +4,32 @@ import { NeuralButton } from "../ui/neural-button";
 const ProofSection = () => {
   const results = [
     { 
-      brand: "Brand X", 
+      brand: "TechFlow Solutions", 
       before: "₹30L/month", 
       after: "₹1.2Cr/month", 
       timeframe: "6 weeks",
       highlight: "4X Growth" 
     },
     { 
-      brand: "Brand Y", 
+      brand: "Zenith Wellness", 
       before: "High CAC", 
       after: "50% Lower CAC", 
       timeframe: "3 months",
       highlight: "3X Profits" 
+    },
+    { 
+      brand: "Nexus Apparel", 
+      before: "₹15L/month", 
+      after: "₹75L/month", 
+      timeframe: "8 weeks",
+      highlight: "5X Revenue" 
+    },
+    { 
+      brand: "Velocity Gaming", 
+      before: "2.1% CTR", 
+      after: "8.7% CTR", 
+      timeframe: "4 weeks",
+      highlight: "4X CTR" 
     }
   ];
 
@@ -44,26 +58,26 @@ const ProofSection = () => {
           </div>
 
           {/* Case Study Results */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {results.map((result, index) => (
               <div key={index} className="testimonial-card animate-scale-in" style={{animationDelay: `${index * 0.2}s`}}>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold">{result.brand}</h3>
-                  <div className="stat-badge">{result.highlight}</div>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-0">{result.brand}</h3>
+                  <div className="stat-badge text-sm">{result.highlight}</div>
                 </div>
                 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-foreground/70">Before:</span>
-                    <span className="font-semibold">{result.before}</span>
+                    <span className="text-foreground/90 text-sm sm:text-base">Before:</span>
+                    <span className="font-semibold text-sm sm:text-base">{result.before}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-foreground/70">After:</span>
-                    <span className="font-semibold text-accent">{result.after}</span>
+                    <span className="text-foreground/90 text-sm sm:text-base">After:</span>
+                    <span className="font-semibold text-accent text-sm sm:text-base">{result.after}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-foreground/70">Timeframe:</span>
-                    <span className="font-semibold">{result.timeframe}</span>
+                    <span className="text-foreground/90 text-sm sm:text-base">Time:</span>
+                    <span className="font-semibold text-sm sm:text-base">{result.timeframe}</span>
                   </div>
                 </div>
               </div>

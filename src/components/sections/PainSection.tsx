@@ -18,26 +18,26 @@ const PainSection = () => {
               You're not lazy. You're not broken. You're <span className="text-accent font-bold">in the trenches.</span>
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8 text-left my-8">
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 text-left my-8">
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <Smartphone className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Trying to grow a brand while your phone won't stop buzzing, inbox is a crime scene</p>
+                  <Smartphone className="h-5 w-5 sm:h-6 sm:w-6 text-accent mt-1 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-foreground/90">Trying to grow a brand while your phone won't stop buzzing, inbox is a crime scene</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Clock className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Sleep like a teething toddler, wake up with 47 tabs open in your brain</p>
+                  <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-accent mt-1 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-foreground/90">Sleep like a teething toddler, wake up with 47 tabs open in your brain</p>
                 </div>
               </div>
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <Zap className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>The ad that worked yesterday dies today. You hop from strategy to strategy</p>
+                  <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-accent mt-1 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-foreground/90">The ad that worked yesterday dies today. You hop from strategy to strategy</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <AlertTriangle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Feels like momentum. Delivers like Zomato on a rainy day.</p>
+                  <AlertTriangle className="h-5 w-5 sm:h-6 sm:w-6 text-accent mt-1 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-foreground/90">Feels like momentum. Delivers like Zomato on a rainy day.</p>
                 </div>
               </div>
             </div>

@@ -7,21 +7,21 @@ const ShiftSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           {/* Visual Transformation */}
-          <div className="flex items-center justify-center mb-8 space-x-8">
+          <div className="flex items-center justify-center mb-8 space-x-4 sm:space-x-8">
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-destructive/20 flex items-center justify-center mb-2">
-                <span className="text-2xl">😵</span>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-destructive/20 flex items-center justify-center mb-2">
+                <span className="text-xl sm:text-2xl">😵</span>
               </div>
-              <span className="text-sm text-primary-foreground/70">Chaos</span>
+              <span className="text-xs sm:text-sm text-primary-foreground/80 font-medium">Chaos</span>
             </div>
             
-            <ArrowRight className="h-8 w-8 text-accent animate-neural-pulse" />
+            <ArrowRight className="h-6 w-6 sm:h-8 sm:w-8 text-accent animate-pulse" />
             
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-2">
-                <Lightbulb className="h-8 w-8 text-accent" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-accent/20 flex items-center justify-center mb-2">
+                <Lightbulb className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
               </div>
-              <span className="text-sm text-primary-foreground/70">Clarity</span>
+              <span className="text-xs sm:text-sm text-primary-foreground/80 font-medium">Clarity</span>
             </div>
           </div>
 

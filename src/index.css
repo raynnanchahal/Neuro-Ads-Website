@@ -250,16 +250,28 @@
     gap: 2rem;
   }
   
-  .stat-item {
-    @apply text-center p-6 rounded-xl;
+  .testimonial-card {
+    @apply p-4 sm:p-6 rounded-xl;
     background: var(--gradient-card);
     border: 1px solid hsl(var(--border));
     transition: var(--transition-luxury);
   }
   
-  .stat-item:hover {
+  .testimonial-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-gold);
+    box-shadow: var(--shadow-card);
+    border-color: hsl(var(--accent) / 0.5);
+  }
+  
+  .stat-badge {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold;
+    background: hsl(var(--accent) / 0.1);
+    color: hsl(var(--accent));
+    border: 1px solid hsl(var(--accent) / 0.2);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
   }
   
   .stat-number {

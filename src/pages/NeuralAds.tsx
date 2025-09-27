@@ -7,8 +7,6 @@ import ProofSection from "@/components/sections/ProofSection";
 import OfferSection from "@/components/sections/OfferSection";
 import EmotionalSection from "@/components/sections/EmotionalSection";
 import Footer from "@/components/Footer";
-import StickyCTA from "@/components/StickyCTA";
-
 const NeuralAds = () => {
   return (
     <div className="min-h-screen">
@@ -23,7 +21,6 @@ const NeuralAds = () => {
         <EmotionalSection />
       </main>
       <Footer />
-      <StickyCTA />
     </div>
   );
 };

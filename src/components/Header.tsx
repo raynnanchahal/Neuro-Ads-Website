@@ -10,15 +10,18 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="p-2 rounded-xl bg-gradient-to-br from-accent to-luxury-purple">
+          <div className="flex items-center space-x-4">
+            <div className="p-2 rounded-xl bg-gradient-to-br from-accent to-primary">
               <Crown className="h-7 w-7 text-accent-foreground" />
             </div>
-            <div>
+            <div className="flex flex-col">
               <span className="text-xl font-heading font-bold text-foreground">Neural Ads</span>
-              <div className="flex items-center">
+              <div className="hidden sm:flex items-center">
                 <Sparkles className="h-3 w-3 text-accent mr-1" />
-                <span className="text-xs text-accent font-medium tracking-wide">PREMIUM</span>
+                <span className="text-xs text-accent font-medium tracking-wide">Combining Neuroscience with your ads to make them feel stupid saying No to.</span>
+              </div>
+              <div className="sm:hidden">
+                <span className="text-xs text-accent font-medium">Neuroscience + Ads</span>
               </div>
             </div>
           </div>
