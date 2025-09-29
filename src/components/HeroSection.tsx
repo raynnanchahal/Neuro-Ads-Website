@@ -1,97 +1,82 @@
-import { Brain, Zap, TrendingUp, Star, Award, Crown } from "lucide-react";
+import { Brain, ChevronDown } from "lucide-react";
 import { NeuralButton } from "./ui/neural-button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden luxury-hero-bg">
-      {/* Ambient Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-luxury-gold/20 to-transparent rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-luxury-purple/20 to-transparent rounded-full blur-3xl animate-float" style={{animationDelay: '3s'}}></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 section-container text-center">
-        <div className="max-w-5xl mx-auto animate-fade-in">
-          {/* Value Proposition */}
-          <div className="flex justify-center mb-12">
-            <div className="flow-badge">
-              <Brain className="h-5 w-5 mr-3" />
-              COMBINING NEUROSCIENCE WITH YOUR ADS TO MAKE THEM FEEL STUPID SAYING NO TO.
+    <section className="brain-hero-bg relative flex items-center justify-center">
+      <div className="container-flow relative z-10 py-32">
+        {/* Badge */}
+        <div className="flex justify-center mb-12">
+          <div className="glass-effect border border-flow-cyan/20 rounded-full px-6 py-3 animate-fade-in">
+            <div className="flex items-center gap-3">
+              <Brain className="w-5 h-5 text-flow-cyan" />
+              <span className="text-sm font-medium uppercase tracking-wider">NEUROSCIENCE MEETS ADVERTISING</span>
             </div>
-          </div>
-
-          {/* Main Headline */}
-          <h1 className="font-sans text-4xl sm:text-5xl lg:text-7xl font-black text-foreground mb-12 leading-tight tracking-wide uppercase">
-            The Game Has{" "}
-            <span className="text-accent">Changed</span>
-          </h1>
-
-          {/* Sophisticated Subtext */}
-          <div className="mb-12 space-y-6 max-w-4xl mx-auto">
-            <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed font-body">
-              Still running ads like it's 2023? 
-              <span className="text-accent font-semibold"> How did it feel to burn all that money?</span>
-            </p>
-            <p className="text-lg sm:text-xl text-muted-foreground/80 max-w-3xl mx-auto leading-relaxed">
-              In 2025, the brands firing agencies, deleting UGC, and killing SKUs are the ones 
-              <span className="text-accent font-bold"> tripling profits.</span>
-            </p>
-            
-            {/* Video Placeholder */}
-            <div className="max-w-3xl mx-auto mt-8">
-              <div className="aspect-video bg-card/50 rounded-lg border border-accent/20 backdrop-blur-sm overflow-hidden">
-                <iframe 
-                  src="https://www.loom.com/embed/4d4c3329c3d74c62992cb4972a7bd155?sid=e1e612eb-c1c6-4620-9b82-afd908dd2fd6"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  allowFullScreen
-                  title="Neural Ads Strategy Video"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Luxury Stats Grid */}
-          <div className="stats-grid mb-12 max-w-4xl mx-auto">
-            <div className="stat-item animate-scale-in">
-              <TrendingUp className="h-8 w-8 mx-auto mb-3 text-accent" />
-              <div className="stat-number">3X</div>
-              <div className="text-muted-foreground font-medium">Profit Increase</div>
-            </div>
-            <div className="stat-item animate-scale-in" style={{animationDelay: '0.2s'}}>
-              <Award className="h-8 w-8 mx-auto mb-3 text-accent" />
-              <div className="stat-number">132+</div>
-              <div className="text-muted-foreground font-medium">Elite Brands</div>
-            </div>
-            <div className="stat-item animate-scale-in" style={{animationDelay: '0.4s'}}>
-              <Brain className="h-8 w-8 mx-auto mb-3 text-accent" />
-              <div className="stat-number">$100M+</div>
-              <div className="text-muted-foreground font-medium">Revenue Generated</div>
-            </div>
-          </div>
-
-          {/* Flow-Inspired CTA */}
-          <div className="animate-slide-up" style={{animationDelay: '0.6s'}}>
-            <NeuralButton 
-              variant="flow" 
-              size="xl"
-              onClick={() => window.open('https://calendly.com/ritishnanchahal-amld/discovery', '_blank')}
-              className="mb-6 shadow-2xl uppercase tracking-wider"
-            >
-              Book My Neural Strategy Call
-            </NeuralButton>
-            <p className="text-muted-foreground/60 text-sm font-body">
-              Exclusive 30-minute strategy session • Limited availability
-            </p>
           </div>
         </div>
+        
+        {/* Main headline */}
+        <h1 className="headline-flow text-center mb-12">
+          HELPING LEADERS AND THEIR<br />
+          TEAMS REACH THEIR POTENTIAL<br />
+          THROUGH HARNESSING<br />
+          <span className="accent-text">THE POWER OF FLOW STATE.</span>
+        </h1>
+        
+        {/* Subtext */}
+        <div className="text-center mb-16">
+          <p className="text-flow mx-auto mb-8">
+            In 2025, the brands firing agencies, deleting UGC, and killing SKUs are the ones tripling profits.
+          </p>
 
-        {/* Elegant Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-8 h-12 border-2 border-accent/50 rounded-full flex justify-center backdrop-blur-sm">
-            <div className="w-1 h-4 bg-accent rounded-full mt-3 animate-glow-pulse"></div>
+          {/* Video embed */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="brain-visual mb-8">
+              <div className="brain-outline"></div>
+              <button className="play-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="ml-1">
+                  <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden bg-card/50 border border-border cyber-glow">
+              <iframe
+                src="https://www.loom.com/embed/4d4c3329c3d74c62992cb4972a7bd155?sid=e1e612eb-c1c6-4620-9b82-afd908dd2fd6"
+                className="w-full h-full"
+                frameBorder="0"
+                allowFullScreen
+                title="Neural Ads Explanation"
+              />
+            </div>
           </div>
+          
+          <p className="text-flow mx-auto mb-16">
+            We've spent 18 months reverse-engineering how the top 1% of advertisers think, move, and profit in 2024. 
+            The result? A playbook that's generated <span className="accent-text font-semibold">$127M+ in trackable revenue</span> for 847 elite brands.
+          </p>
+        </div>
+        
+        {/* Stats grid */}
+        <div className="neural-grid mb-16">
+          <div className="stat-display">
+            <div className="stat-number">847%</div>
+            <div className="stat-label">Average profit increase</div>
+          </div>
+          <div className="stat-display">
+            <div className="stat-number">847</div>
+            <div className="stat-label">Elite brands served</div>
+          </div>
+          <div className="stat-display">
+            <div className="stat-number">$127M+</div>
+            <div className="stat-label">Revenue generated</div>
+          </div>
+        </div>
+        
+        {/* CTA */}
+        <div className="text-center">
+          <NeuralButton variant="flow" size="lg" className="animate-float-subtle">
+            TRAIN WITH US
+          </NeuralButton>
         </div>
       </div>
     </section>

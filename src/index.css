@@ -8,78 +8,51 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors - Flow Research Inspired Dark Theme */
-    --background: 0 0% 2%;
+    /* Flow Research Collective inspired colors */
+    --background: 0 0% 3%;
     --foreground: 0 0% 98%;
-    
-    /* Card Components */
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 95%;
-    
-    /* Interactive Elements */
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 95%;
-    
-    /* Primary Brand (Pure White) */
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 2%;
-    
-    /* Secondary (Dark Gray) */
-    --secondary: 0 0% 6%;
-    --secondary-foreground: 0 0% 90%;
-    
-    /* Muted Elements */
+    --primary-foreground: 0 0% 3%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 65%;
-    
-    /* Flow-Inspired Cyan Accent */
-    --accent: 190 85% 55%;
-    --accent-foreground: 0 0% 2%;
-    
-    /* Luxury Purple Variations */
-    --luxury-purple: 250 84% 54%;
-    --luxury-purple-dark: 250 84% 35%;
-    --luxury-purple-light: 250 84% 85%;
-    
-    /* Premium Blue */
-    --premium-blue: 217 91% 60%;
-    --premium-blue-dark: 217 91% 40%;
-    --premium-blue-light: 217 91% 80%;
-    
-    /* Destructive States */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    /* Borders & Inputs */
-    --border: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 186 100% 60%;
+    --accent-foreground: 0 0% 3%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
     --input: 0 0% 12%;
-    --ring: 47 96% 68%;
+    --ring: 186 100% 60%;
+    --radius: 0.5rem;
     
-    /* Border Radius */
-    --radius: 1rem;
+    /* Flow-inspired color palette */
+    --flow-cyan: 186 100% 60%;
+    --flow-blue: 200 100% 70%;
+    --flow-purple: 250 100% 75%;
     
-    /* Flow-Inspired Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 1%), hsl(0 0% 4%));
-    --gradient-flow: linear-gradient(135deg, hsl(190 85% 55%), hsl(200 90% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 2%) 0%, hsl(0 0% 1%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 3%), hsl(0 0% 5%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 2%), hsl(0 0% 4%));
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--flow-cyan)), hsl(var(--flow-blue)));
+    --gradient-neural: linear-gradient(135deg, hsl(186 100% 60% / 0.15), hsl(200 100% 70% / 0.1));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(0 0% 6%));
+    --gradient-brain: radial-gradient(ellipse at center, hsl(186 100% 60% / 0.2) 0%, transparent 70%);
     
-    /* Flow-Inspired Shadows */
-    --shadow-flow: 0 32px 64px -12px hsl(0 0% 0% / 0.6);
-    --shadow-cyan: 0 20px 40px -8px hsl(190 85% 55% / 0.15);
-    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
-    --shadow-button: 0 4px 20px -4px hsl(190 85% 55% / 0.25);
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--flow-cyan) / 0.3);
+    --shadow-cyan: 0 0 20px hsl(186 100% 60% / 0.4);
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
     
-    /* Typography Scale - Flow Research Inspired */
-    --font-heading: 'Geist', system-ui, sans-serif;
-    --font-body: 'Geist', system-ui, sans-serif;
-    --font-mono: 'Geist Mono', 'Monaco', 'Cascadia Code', monospace;
+    /* Typography */
+    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -143,20 +116,31 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-family: var(--font-body);
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    @apply antialiased;
   }
-  
+
+  /* Typography - Flow Research style */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
   }
-  
+
   h1 {
-    font-weight: 700;
-    letter-spacing: -0.04em;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
   
   .text-gradient {
@@ -167,64 +151,101 @@
   }
 }
 
-/* Flow Research Inspired Components */
+/* Flow Research inspired utility classes */
 @layer components {
-  .luxury-hero-bg {
-    background: var(--gradient-hero);
-    position: relative;
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--flow-cyan)), hsl(var(--flow-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  
-  .luxury-hero-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 50%, hsl(190 85% 55% / 0.05) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  
-  .luxury-card {
-    background: var(--gradient-card);
-    box-shadow: var(--shadow-luxury);
-    border: 1px solid hsl(var(--border));
-    transition: var(--transition-luxury);
-  }
-  
-  .luxury-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-gold);
-  }
-  
-  .premium-button {
-    background: var(--gradient-luxury);
-    box-shadow: var(--shadow-button);
-    transition: var(--transition-luxury);
+
+  .brain-hero-bg {
+    background: hsl(var(--background));
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
   }
-  
-  .premium-button::before {
+
+  .brain-hero-bg::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, transparent 0%, hsl(0 0% 100% / 0.1) 50%, transparent 100%);
-    transform: translateX(-100%);
-    transition: transform 0.6s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background: var(--gradient-brain);
+    border-radius: 50%;
+    z-index: 1;
+    animation: brain-pulse 4s ease-in-out infinite;
   }
   
-  .premium-button:hover::before {
-    transform: translateX(100%);
+  .flow-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 8px;
+    padding: 2rem;
+    transition: var(--transition-smooth);
+  }
+
+  .flow-card:hover {
+    border-color: hsl(var(--flow-cyan) / 0.3);
+    box-shadow: 0 0 30px hsl(var(--flow-cyan) / 0.1);
   }
   
-  .premium-button:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: var(--shadow-gold);
-  }
-  
-  .glass-card {
-    background: hsl(var(--card) / 0.6);
+  .glass-effect {
+    background: hsl(var(--background) / 0.8);
     backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--border) / 0.5);
-    box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .cyber-glow {
+    box-shadow: 
+      0 0 20px hsl(var(--flow-cyan) / 0.3),
+      inset 0 1px 0 hsl(var(--flow-cyan) / 0.1);
+  }
+  
+  .section-spacing {
+    padding: 8rem 0;
+  }
+
+  .container-flow {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .text-flow {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: hsl(var(--muted-foreground));
+    max-width: 65ch;
+  }
+
+  .headline-flow {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .accent-text {
+    color: hsl(var(--flow-cyan));
+  }
+
+  .neural-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0;
+  }
+
+  .stat-display {
+    text-align: center;
+    padding: 2rem;
   }
   
   .gradient-border {
@@ -279,11 +300,75 @@
   }
   
   .stat-number {
-    @apply text-4xl font-bold mb-2;
-    background: var(--gradient-flow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 200;
+    color: hsl(var(--flow-cyan));
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .brain-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+  }
+
+  .play-button {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: hsl(var(--flow-cyan));
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    z-index: 10;
+  }
+
+  .play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px hsl(var(--flow-cyan) / 0.6);
+  }
+
+  .brain-outline {
+    width: 400px;
+    height: 300px;
+    border: 2px solid hsl(var(--flow-cyan) / 0.3);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    animation: neural-pulse 3s ease-in-out infinite;
+  }
+
+  .minimal-button {
+    background: transparent;
+    border: 1px solid hsl(var(--flow-cyan));
+    color: hsl(var(--flow-cyan));
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+  }
+
+  .minimal-button:hover {
+    background: hsl(var(--flow-cyan));
+    color: hsl(var(--background));
   }
   
   .flow-badge {
@@ -338,30 +423,43 @@
   }
 }
 
-/* Add missing keyframes at end of file */
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
+/* Flow Research inspired animations */
+@keyframes brain-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
   }
-  100% {
-    transform: translateX(100%);
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }
 
-@keyframes float {
+@keyframes neural-pulse {
+  0%, 100% {
+    border-color: hsl(var(--flow-cyan) / 0.3);
+    box-shadow: 0 0 20px hsl(var(--flow-cyan) / 0.2);
+  }
+  50% {
+    border-color: hsl(var(--flow-cyan) / 0.6);
+    box-shadow: 0 0 40px hsl(var(--flow-cyan) / 0.4);
+  }
+}
+
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px hsl(var(--flow-cyan) / 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px hsl(var(--flow-cyan) / 0.8);
+  }
+}
+
+@keyframes float-subtle {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
     transform: translateY(-10px);
-  }
-}
-
-@keyframes glow-pulse {
-  0%, 100% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0.8;
   }
 }

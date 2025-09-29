@@ -1,99 +1,115 @@
 import { useState } from "react";
-import { Menu, X, Crown, Sparkles } from "lucide-react";
+import { Menu, X, Brain, ChevronDown } from "lucide-react";
 import { NeuralButton } from "./ui/neural-button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="p-2 rounded-full bg-accent/10 border border-accent/20">
-              <Crown className="h-6 w-6 text-accent" />
-            </div>
-            <div>
-              <span className="text-lg font-heading font-semibold text-foreground tracking-wide">NEURAL ADS</span>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a 
-              href="https://creative-win-machine.lovable.app/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-accent transition-all duration-300 font-body font-medium tracking-wide hover:scale-105"
-            >
-              High-Converting Creatives
-            </a>
-            <a 
-              href="https://preview--neuroads-casecraft.lovable.app/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-accent transition-all duration-300 font-body font-medium tracking-wide hover:scale-105"
-            >
-              Case Studies
-            </a>
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
-            <NeuralButton 
-              variant="flow" 
-              size="lg"
-              onClick={() => window.open('https://calendly.com/ritishnanchahal-amld/discovery', '_blank')}
-            >
-              BOOK STRATEGY CALL
-            </NeuralButton>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground hover:text-accent transition-colors rounded-lg hover:bg-accent/10"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden luxury-card mt-4 mb-4 animate-fade-in">
-            <div className="px-4 pt-4 pb-6 space-y-4">
-              <a 
-                href="https://creative-win-machine.lovable.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block px-4 py-3 text-foreground hover:text-accent transition-colors font-body font-medium"
-              >
-                High-Converting Creatives
-              </a>
-              <a 
-                href="https://preview--neuroads-casecraft.lovable.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block px-4 py-3 text-foreground hover:text-accent transition-colors font-body font-medium"
-              >
-                Case Studies
-              </a>
-              <div className="px-4 pt-2">
-                  <NeuralButton 
-                    variant="flow" 
-                    size="lg" 
-                    className="w-full"
-                    onClick={() => window.open('https://calendly.com/ritishnanchahal-amld/discovery', '_blank')}
-                  >
-                    BOOK STRATEGY CALL
-                  </NeuralButton>
+    <>
+      {/* Top announcement bar */}
+      <div className="bg-flow-cyan text-background text-center py-2 text-sm font-medium uppercase tracking-wider">
+        READ OUR ANNOUNCEMENT ABOUT THE FUTURE OF FRC
+      </div>
+      
+      {/* Main header */}
+      <header className="glass-effect sticky top-0 z-50 border-b border-border/50">
+        <div className="container-flow">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full border border-flow-cyan/30 flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-flow-cyan" />
+                </div>
+                <div>
+                  <div className="font-medium text-sm uppercase tracking-wider">FLOW RESEARCH</div>
+                  <div className="font-light text-xs uppercase tracking-wider text-muted-foreground">COLLECTIVE</div>
+                </div>
               </div>
             </div>
+            
+            {/* Desktop navigation */}
+            <nav className="hidden lg:flex space-x-12">
+              <a href="#trainings" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
+                TRAININGS
+              </a>
+              <a href="#research" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
+                RESEARCH
+              </a>
+              <a href="#about" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
+                ABOUT
+              </a>
+              <a href="#learn" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors flex items-center gap-1">
+                LEARN
+                <ChevronDown className="w-3 h-3" />
+              </a>
+            </nav>
+            
+            {/* Desktop CTA */}
+            <div className="hidden lg:block">
+              <NeuralButton variant="neural" size="default">
+                TRAIN NOW
+              </NeuralButton>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-foreground hover:text-flow-cyan transition-colors p-2"
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
-        )}
-      </div>
-    </header>
+        </div>
+      </header>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 lg:hidden">
+          <div className="fixed inset-0 bg-background/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
+          <div className="fixed top-32 left-0 right-0 glass-effect border-b border-border/50 p-6">
+            <nav className="flex flex-col space-y-6">
+              <a 
+                href="#trainings" 
+                className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                TRAININGS
+              </a>
+              <a 
+                href="#research" 
+                className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                RESEARCH
+              </a>
+              <a 
+                href="#about" 
+                className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                ABOUT
+              </a>
+              <a 
+                href="#learn" 
+                className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                LEARN
+              </a>
+              <div className="pt-4">
+                <NeuralButton variant="neural" size="default" className="w-full">
+                  TRAIN NOW
+                </NeuralButton>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
