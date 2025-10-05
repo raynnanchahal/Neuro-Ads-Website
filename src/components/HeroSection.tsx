@@ -35,38 +35,35 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="brain-hero-bg relative flex items-center justify-center">
-      <div className="container-flow relative z-10 py-32">
+    <section className="brain-hero-bg relative flex items-center justify-center min-h-screen">
+      <div className="container-flow relative z-10 py-20 max-w-6xl mx-auto">
         {/* Badge */}
-        <div className="flex justify-center mb-12">
-          <div className="glass-effect border border-flow-cyan/20 rounded-full px-6 py-3 animate-fade-in">
+        <div className="flex justify-center mb-8">
+          <div className="glass-effect border border-flow-cyan/20 rounded-full px-6 py-2.5 animate-fade-in">
             <div className="flex items-center gap-3">
-              <Brain className="w-5 h-5 text-flow-cyan" />
-              <span className="text-sm font-medium uppercase tracking-wider">NEUROSCIENCE MEETS ADVERTISING</span>
+              <Brain className="w-4 h-4 text-flow-cyan" />
+              <span className="text-xs font-medium uppercase tracking-wider">NEUROSCIENCE MEETS ADVERTISING</span>
             </div>
           </div>
         </div>
         
         {/* Main headline */}
-        <h1 className="headline-flow text-center mb-12">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-center mb-8 leading-tight">
           HELPING D2C BRANDS TO SCALE<br />
           BLEWPAST 8 FIGURES ARR THROUGH<br />
           HARNESSING THE POWER OF<br />
-          <span className="accent-text">NEURAL ADS</span>
+          <span className="text-flow-cyan">NEURAL ADS</span>
         </h1>
         
         {/* Subtext */}
         <div className="text-center mb-16">
-          <p className="text-flow mx-auto mb-12 text-xl max-w-3xl leading-relaxed">
+          <p className="text-lg md:text-xl mx-auto mb-16 max-w-4xl leading-relaxed text-foreground/90">
             If your ads feel less effective than they used to, it's not your creatives, copy, team — it's the system you're using.
             This short breakdown reveals what's changed in 2025, and how leading brands are adapting.
           </p>
 
           {/* Video embed with email gate */}
-          <div id="video-section" className="max-w-4xl mx-auto mb-12">
-            <div className="brain-visual mb-8">
-              <div className="brain-outline"></div>
-            </div>
+          <div id="video-section" className="max-w-4xl mx-auto mb-16">
             
             {!showVideo ? (
               <div className="relative aspect-video rounded-lg overflow-hidden bg-card/50 border border-border cyber-glow">
@@ -113,13 +110,13 @@ const HeroSection = () => {
         </div>
         
         {/* Stats grid */}
-        <div className="neural-grid mb-16">
+        <div className="neural-grid mb-12">
           <div className="stat-display">
             <div className="stat-number">847%</div>
             <div className="stat-label">Average profit increase</div>
           </div>
           <div className="stat-display">
-            <div className="stat-number">847</div>
+            <div className="stat-number">237</div>
             <div className="stat-label">Elite brands served</div>
           </div>
           <div className="stat-display">

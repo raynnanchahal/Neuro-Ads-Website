@@ -7,11 +7,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Top announcement bar */}
-      <div className="bg-flow-cyan text-background text-center py-2 text-sm font-medium uppercase tracking-wider">
-        READ OUR ANNOUNCEMENT ABOUT THE FUTURE OF FRC
-      </div>
-      
       {/* Main header */}
       <header className="glass-effect sticky top-0 z-50 border-b border-border/50">
         <div className="container-flow">
