@@ -48,7 +48,7 @@ const HeroSection = () => {
         </div>
         
         {/* Main headline */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-center mb-8 leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-center mb-8 leading-tight">
           HELPING D2C BRANDS TO SCALE<br />
           BLEWPAST 8 FIGURES ARR THROUGH<br />
           HARNESSING THE POWER OF<br />

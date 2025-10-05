@@ -170,15 +170,18 @@
   .brain-hero-bg::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
-    background: var(--gradient-brain);
-    border-radius: 50%;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 15% 25%, hsl(var(--flow-cyan) / 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 85% 75%, hsl(var(--flow-cyan) / 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 45% 80%, hsl(var(--flow-cyan) / 0.06) 1px, transparent 1px),
+      radial-gradient(circle at 75% 20%, hsl(var(--flow-cyan) / 0.06) 1px, transparent 1px),
+      radial-gradient(circle at 60% 50%, hsl(var(--flow-cyan) / 0.05) 1px, transparent 1px),
+      radial-gradient(circle at 30% 60%, hsl(var(--flow-cyan) / 0.05) 1px, transparent 1px);
+    background-size: 100% 100%;
+    animation: neurons-fire 12s ease-in-out infinite;
+    pointer-events: none;
     z-index: 1;
-    animation: brain-pulse 4s ease-in-out infinite;
   }
   
   .flow-card {
@@ -461,5 +464,20 @@
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes neurons-fire {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  33% {
+    opacity: 0.7;
+    transform: scale(1.03);
+  }
+  66% {
+    opacity: 0.5;
+    transform: scale(0.98);
   }
 }
