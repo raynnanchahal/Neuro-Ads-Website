@@ -22,34 +22,27 @@ const Header = () => {
                 <div className="w-10 h-10 rounded-full border border-flow-cyan/30 flex items-center justify-center">
                   <Brain className="w-5 h-5 text-flow-cyan" />
                 </div>
-                <div>
-                  <div className="font-medium text-sm uppercase tracking-wider">FLOW RESEARCH</div>
-                  <div className="font-light text-xs uppercase tracking-wider text-muted-foreground">COLLECTIVE</div>
-                </div>
+                <div className="font-bold text-lg uppercase tracking-wider">NEURO ADS</div>
               </div>
             </div>
             
             {/* Desktop navigation */}
             <nav className="hidden lg:flex space-x-12">
-              <a href="#trainings" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
-                TRAININGS
+              <a href="https://neuroads-casecraft.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
+                CASE STUDIES
               </a>
-              <a href="#research" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
-                RESEARCH
+              <a href="https://creative-win-machine.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
+                HIGH CONVERTING CREATIVES
               </a>
-              <a href="#about" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
-                ABOUT
-              </a>
-              <a href="#learn" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors flex items-center gap-1">
-                LEARN
-                <ChevronDown className="w-3 h-3" />
+              <a href="https://www.linkedin.com/in/ritish-nach-000801211/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
+                LIFETIME RIDE
               </a>
             </nav>
             
             {/* Desktop CTA */}
             <div className="hidden lg:block">
-              <NeuralButton variant="neural" size="default">
-                TRAIN NOW
+              <NeuralButton variant="neural" size="default" onClick={() => document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' })}>
+                WATCH BREAKDOWN
               </NeuralButton>
             </div>
             
@@ -73,36 +66,43 @@ const Header = () => {
           <div className="fixed top-32 left-0 right-0 glass-effect border-b border-border/50 p-6">
             <nav className="flex flex-col space-y-6">
               <a 
-                href="#trainings" 
+                href="https://neuroads-casecraft.lovable.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                TRAININGS
+                CASE STUDIES
               </a>
               <a 
-                href="#research" 
+                href="https://creative-win-machine.lovable.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                RESEARCH
+                HIGH CONVERTING CREATIVES
               </a>
               <a 
-                href="#about" 
+                href="https://www.linkedin.com/in/ritish-nach-000801211/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                ABOUT
-              </a>
-              <a 
-                href="#learn" 
-                className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                LEARN
+                LIFETIME RIDE
               </a>
               <div className="pt-4">
-                <NeuralButton variant="neural" size="default" className="w-full">
-                  TRAIN NOW
+                <NeuralButton 
+                  variant="neural" 
+                  size="default" 
+                  className="w-full"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  WATCH BREAKDOWN
                 </NeuralButton>
               </div>
             </nav>

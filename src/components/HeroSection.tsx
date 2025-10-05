@@ -1,7 +1,39 @@
-import { Brain, ChevronDown } from "lucide-react";
+import { Brain } from "lucide-react";
 import { NeuralButton } from "./ui/neural-button";
+import { useState } from "react";
+import { Input } from "./ui/input";
+import { toast } from "@/hooks/use-toast";
 
 const HeroSection = () => {
+  const [showVideo, setShowVideo] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleVideoAccess = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!firstName.trim() || !email.trim()) {
+      toast({
+        title: "Please fill in all fields",
+        description: "First name and email are required to watch the video.",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (!email.includes("@")) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setShowVideo(true);
+    toast({
+      title: "Access granted!",
+      description: "Enjoy the breakdown.",
+    });
+  };
+
   return (
     <section className="brain-hero-bg relative flex items-center justify-center">
       <div className="container-flow relative z-10 py-32">
@@ -17,43 +49,67 @@ const HeroSection = () => {
         
         {/* Main headline */}
         <h1 className="headline-flow text-center mb-12">
-          HELPING LEADERS AND THEIR<br />
-          TEAMS REACH THEIR POTENTIAL<br />
-          THROUGH HARNESSING<br />
-          <span className="accent-text">THE POWER OF FLOW STATE.</span>
+          HELPING D2C BRANDS TO SCALE<br />
+          BLEWPAST 8 FIGURES ARR THROUGH<br />
+          HARNESSING THE POWER OF<br />
+          <span className="accent-text">NEURAL ADS</span>
         </h1>
         
         {/* Subtext */}
         <div className="text-center mb-16">
-          <p className="text-flow mx-auto mb-8">
-            In 2025, the brands firing agencies, deleting UGC, and killing SKUs are the ones tripling profits.
+          <p className="text-flow mx-auto mb-12 text-xl max-w-3xl leading-relaxed">
+            If your ads feel less effective than they used to, it's not your creatives, copy, team — it's the system you're using.
+            This short breakdown reveals what's changed in 2025, and how leading brands are adapting.
           </p>
 
-          {/* Video embed */}
-          <div className="max-w-4xl mx-auto mb-12">
+          {/* Video embed with email gate */}
+          <div id="video-section" className="max-w-4xl mx-auto mb-12">
             <div className="brain-visual mb-8">
               <div className="brain-outline"></div>
-              <button className="play-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="ml-1">
-                  <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
-                </svg>
-              </button>
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden bg-card/50 border border-border cyber-glow">
-              <iframe
-                src="https://www.loom.com/embed/4d4c3329c3d74c62992cb4972a7bd155?sid=e1e612eb-c1c6-4620-9b82-afd908dd2fd6"
-                className="w-full h-full"
-                frameBorder="0"
-                allowFullScreen
-                title="Neural Ads Explanation"
-              />
-            </div>
+            
+            {!showVideo ? (
+              <div className="relative aspect-video rounded-lg overflow-hidden bg-card/50 border border-border cyber-glow">
+                <div className="absolute inset-0 flex items-center justify-center bg-background/95 backdrop-blur-sm">
+                  <form onSubmit={handleVideoAccess} className="max-w-md w-full mx-auto px-6 space-y-6">
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold mb-3 uppercase tracking-wider">Watch the Breakdown</h3>
+                      <p className="text-foreground/70">Enter your details to access the video</p>
+                    </div>
+                    <div className="space-y-4">
+                      <Input
+                        type="text"
+                        placeholder="First Name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        className="bg-background/50 border-flow-cyan/30"
+                      />
+                      <Input
+                        type="email"
+                        placeholder="Email Address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="bg-background/50 border-flow-cyan/30"
+                      />
+                      <NeuralButton type="submit" variant="flow" size="lg" className="w-full">
+                        UNLOCK VIDEO
+                      </NeuralButton>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            ) : (
+              <div className="relative aspect-video rounded-lg overflow-hidden bg-card/50 border border-border cyber-glow">
+                <iframe
+                  src="https://www.loom.com/embed/4d4c3329c3d74c62992cb4972a7bd155?sid=e1e612eb-c1c6-4620-9b82-afd908dd2fd6"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="Neural Ads Explanation"
+                />
+              </div>
+            )}
           </div>
-          
-          <p className="text-flow mx-auto mb-16">
-            We've spent 18 months reverse-engineering how the top 1% of advertisers think, move, and profit in 2024. 
-            The result? A playbook that's generated <span className="accent-text font-semibold">$127M+ in trackable revenue</span> for 847 elite brands.
-          </p>
         </div>
         
         {/* Stats grid */}
@@ -74,8 +130,13 @@ const HeroSection = () => {
         
         {/* CTA */}
         <div className="text-center">
-          <NeuralButton variant="flow" size="lg" className="animate-float-subtle">
-            TRAIN WITH US
+          <NeuralButton 
+            variant="flow" 
+            size="lg" 
+            className="animate-float-subtle"
+            onClick={() => document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            WATCH BREAKDOWN
           </NeuralButton>
         </div>
       </div>
