@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import DiscoverySection from "@/components/sections/DiscoverySection";
+import ProofSection from "@/components/sections/ProofSection";
 import Footer from "@/components/Footer";
 
 const NeuralAds = () => {
@@ -10,6 +11,7 @@ const NeuralAds = () => {
       <main>
         <HeroSection />
         <DiscoverySection />
+        <ProofSection />
       </main>
       <Footer />
     </div>
