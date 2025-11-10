@@ -20,13 +20,6 @@ const Header = () => {
               </div>
             </div>
             
-            {/* Desktop navigation */}
-            <nav className="hidden lg:flex space-x-8 xl:space-x-12">
-              <a href="https://neuroads-casecraft.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-xs xl:text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors">
-                CASE STUDIES
-              </a>
-            </nav>
-            
             {/* Desktop CTA */}
             <div className="hidden lg:block">
               <NeuralButton variant="neural" size="default" onClick={() => window.open('https://cal.com/ritish-nanchahal/call', '_blank')}>
@@ -53,28 +46,17 @@ const Header = () => {
           <div className="fixed inset-0 bg-background/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)} />
           <div className="fixed top-32 left-0 right-0 glass-effect border-b border-border/50 p-6">
             <nav className="flex flex-col space-y-6">
-              <a 
-                href="https://neuroads-casecraft.lovable.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-sm font-medium uppercase tracking-wider hover:text-flow-cyan transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+              <NeuralButton 
+                variant="neural" 
+                size="default" 
+                className="w-full"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.open('https://cal.com/ritish-nanchahal/call', '_blank');
+                }}
               >
-                CASE STUDIES
-              </a>
-              <div className="pt-4">
-                <NeuralButton 
-                  variant="neural" 
-                  size="default" 
-                  className="w-full"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    window.open('https://cal.com/ritish-nanchahal/call', '_blank');
-                  }}
-                >
-                  LET'S TALK
-                </NeuralButton>
-              </div>
+                LET'S TALK
+              </NeuralButton>
             </nav>
           </div>
         </div>
