@@ -18,8 +18,8 @@ const HeroSection = () => {
         
         {/* Main headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-center mb-8 leading-tight px-4">
-          HELPING D2C BRANDS TO SCALE<br />
-          BLEWPAST 8 FIGURES ARR THROUGH<br />
+          SCALE YOUR FASHION BRAND TO<br />
+          8 FIGURES IN 180 DAYS<br />
           HARNESSING THE POWER OF<br />
           <span className="text-gradient">NEURAL ADS</span>
         </h1>
