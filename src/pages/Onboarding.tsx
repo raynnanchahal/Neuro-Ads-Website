@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { WistiaPlayer } from "@wistia/wistia-player-react";
 
 const Onboarding = () => {
   return (
@@ -31,24 +32,12 @@ const Onboarding = () => {
           </div>
 
           {/* Video Embed */}
-          <div 
-            className="mb-12 rounded-lg overflow-hidden bg-card border border-border"
-            dangerouslySetInnerHTML={{
-              __html: `
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/spulusfa6p.js" async type="module"></script>
-                <style>
-                wistia-player[media-id='spulusfa6p']:not(:defined) {
-                  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/spulusfa6p/swatch');
-                  display: block;
-                  filter: blur(5px);
-                  padding-top:45.0%;
-                }
-                </style>
-                <wistia-player media-id="spulusfa6p" aspect="2.2222222222222223"></wistia-player>
-              `
-            }}
-          />
+          <div className="mb-12 rounded-lg overflow-hidden bg-card border border-border">
+            <WistiaPlayer 
+              mediaId="spulusfa6p"
+              playerColor="00bbff"
+            />
+          </div>
 
           {/* Action Links */}
           <div className="grid sm:grid-cols-2 gap-6 mb-16">
