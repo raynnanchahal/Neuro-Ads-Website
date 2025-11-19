@@ -17,10 +17,10 @@ const HeroSection = () => {
         </div>
         
         {/* Main headline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-center mb-8 leading-tight px-4">
-          SCALE TO $500K/MONTH<br />
-          WITHIN 180 DAYS<br />
-          USING <span className="text-gradient">NEURO ADS</span>.
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-center mb-8 leading-[1.1] px-4 font-bold">
+          <span className="block">SCALE TO $500K/MONTH</span>
+          <span className="block">WITHIN 180 DAYS</span>
+          <span className="block">USING <span className="text-gradient">NEURO ADS</span>.</span>
         </h1>
         
         {/* Subtext */}
