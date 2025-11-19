@@ -18,7 +18,8 @@ const HeroSection = () => {
         
         {/* Main headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-center mb-8 leading-tight px-4">
-          SCALE TO $500K/MONTH WITHIN 180 DAYS<br />
+          SCALE TO $500K/MONTH<br />
+          WITHIN 180 DAYS<br />
           USING <span className="text-gradient">NEURO ADS</span>.
         </h1>
         
