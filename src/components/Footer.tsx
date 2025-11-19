@@ -23,15 +23,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-foreground/90 tracking-wide">Resources</h3>
             <div className="flex flex-col space-y-3 text-sm">
               <a 
-                href="https://creative-win-machine.lovable.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-flow-cyan transition-colors"
-              >
-                High-Converting Creatives
-              </a>
-              <a 
-                href="https://preview--neuroads-casecraft.lovable.app/" 
+                href="https://neuroads-casecraft.lovable.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-flow-cyan transition-colors"

@@ -18,10 +18,8 @@ const HeroSection = () => {
         
         {/* Main headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-center mb-8 leading-tight px-4">
-          SCALE YOUR FASHION BRAND TO<br />
-          8 FIGURES IN 180 DAYS<br />
-          HARNESSING THE POWER OF<br />
-          <span className="text-gradient">NEURAL ADS</span>
+          SCALE TO $500K/MONTH WITHIN 180 DAYS<br />
+          USING <span className="text-gradient">NEURO ADS</span>.
         </h1>
         
         {/* Subtext */}
@@ -46,7 +44,7 @@ const HeroSection = () => {
         </div>
         
         {/* Stats grid */}
-        <div className="neural-grid mb-12 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 px-4 max-w-5xl mx-auto">
           <div className="stat-display">
             <div className="stat-number">847%</div>
             <div className="stat-label">Average profit increase</div>

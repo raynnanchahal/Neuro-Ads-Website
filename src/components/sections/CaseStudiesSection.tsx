@@ -37,7 +37,7 @@ const CaseStudiesSection = () => {
             variant="flow"
             size="lg"
             className="group"
-            onClick={() => window.open("https://preview--neuroads-casecraft.lovable.app/", "_blank")}
+            onClick={() => window.open("https://neuroads-casecraft.lovable.app/", "_blank")}
           >
             Check Case Studies
             <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
