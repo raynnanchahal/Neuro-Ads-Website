@@ -227,13 +227,37 @@
   }
   
   .section-spacing {
-    padding: 8rem 0;
+    padding: 4rem 0;
+  }
+  
+  @media (min-width: 640px) {
+    .section-spacing {
+      padding: 6rem 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-spacing {
+      padding: 8rem 0;
+    }
   }
 
   .container-flow {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container-flow {
+      padding: 0 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-flow {
+      padding: 0 2rem;
+    }
   }
 
   .text-flow {
@@ -265,7 +289,19 @@
 
   .stat-display {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .stat-display {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .stat-display {
+      padding: 2rem;
+    }
   }
   
   .gradient-border {
