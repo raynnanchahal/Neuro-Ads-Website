@@ -477,6 +477,35 @@
     border-top: 1px solid hsl(var(--border));
     transition: var(--transition-smooth);
   }
+  
+  /* Prose styling for legal pages */
+  .prose {
+    @apply text-foreground/80;
+  }
+  
+  .prose h2 {
+    @apply text-foreground mt-8 mb-4;
+  }
+  
+  .prose h3 {
+    @apply text-foreground mt-6 mb-3;
+  }
+  
+  .prose p {
+    @apply mb-4;
+  }
+  
+  .prose ul {
+    @apply mb-4;
+  }
+  
+  .prose a {
+    @apply text-flow-cyan hover:underline;
+  }
+  
+  .prose strong {
+    @apply text-foreground font-semibold;
+  }
 }
 
 /* Flow Research inspired animations */

@@ -30,9 +30,6 @@ const Footer = () => {
               >
                 Case Studies
               </a>
-              <span className="text-foreground/50 cursor-not-allowed">
-                We are Hiring (Coming Soon)
-              </span>
             </div>
           </div>
           
@@ -83,15 +80,15 @@ const Footer = () => {
         {/* Legal & Disclaimers */}
         <div className="border-t border-border/20 pt-8 space-y-6">
           <div className="flex flex-wrap justify-center gap-3 text-xs">
-            <span className="text-foreground/50 hover:text-foreground/70 cursor-not-allowed transition-colors">Privacy Policy</span>
+            <a href="/privacy" className="text-foreground/50 hover:text-flow-cyan transition-colors">Privacy Policy</a>
             <span className="text-foreground/30">•</span>
-            <span className="text-foreground/50 hover:text-foreground/70 cursor-not-allowed transition-colors">Terms & Conditions</span>
+            <a href="/terms" className="text-foreground/50 hover:text-flow-cyan transition-colors">Terms & Conditions</a>
             <span className="text-foreground/30">•</span>
-            <span className="text-foreground/50 hover:text-foreground/70 cursor-not-allowed transition-colors">GDPR</span>
+            <a href="/gdpr" className="text-foreground/50 hover:text-flow-cyan transition-colors">GDPR</a>
             <span className="text-foreground/30">•</span>
-            <span className="text-foreground/50 hover:text-foreground/70 cursor-not-allowed transition-colors">Earning Disclaimer</span>
+            <a href="/disclaimer" className="text-foreground/50 hover:text-flow-cyan transition-colors">Earning Disclaimer</a>
             <span className="text-foreground/30">•</span>
-            <span className="text-foreground/50 hover:text-foreground/70 cursor-not-allowed transition-colors">Refunds & Cancellation</span>
+            <a href="/refunds" className="text-foreground/50 hover:text-flow-cyan transition-colors">Refunds & Cancellation</a>
           </div>
           
           <div className="text-center max-w-3xl mx-auto">
