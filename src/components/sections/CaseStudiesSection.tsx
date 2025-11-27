@@ -69,7 +69,7 @@ const CaseStudiesSection = () => {
             variant="flow"
             size="lg"
             className="group w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8"
-            onClick={() => window.open("https://neuroads-casecraft.lovable.app/", "_blank")}
+            onClick={() => window.open("https://clients.neuroads.agency", "_blank")}
           >
             Check Case Studies
             <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
