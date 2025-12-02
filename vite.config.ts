@@ -3,8 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  // Required for GitHub Pages when using a custom domain
-  base: "/",    
+  base: "/",
 
   server: {
     host: "::",
@@ -17,7 +16,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(new URL(".", import.meta.url).pathname, "./src"),
     },
   },
 
@@ -26,9 +25,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, "index.html"),
-        // Include 404 explicitly so GitHub Pages will serve it
-        "404": path.resolve(__dirname, "404.html"),
+        main: new URL("./index.html", import.meta.url).pathname,
+        "404": new URL("./404.html", import.meta.url).pathname,
       },
     },
   },
