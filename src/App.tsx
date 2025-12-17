@@ -8,6 +8,9 @@ import GDPR from "@/pages/GDPR";
 import Refunds from "@/pages/Refunds";
 import Disclaimer from "@/pages/Disclaimer";
 
+// Onboarding page
+import Onboarding from "@/pages/Onboarding";
+
 function App() {
   return (
     <Router>
@@ -15,6 +18,9 @@ function App() {
 
         {/* Main site */}
         <Route path="/" element={<Home />} />
+
+        {/* Onboarding */}
+        <Route path="/onboarding" element={<Onboarding />} />
 
         {/* Policy pages */}
         <Route path="/privacy" element={<PrivacyPolicy />} />
