@@ -1,5 +1,5 @@
 import neuralLogo from "@/assets/neural-logo.png";
-import { Linkedin, Mail, MessageCircle, MapPin } from "lucide-react";
+import { Linkedin, Instagram, Mail, MessageCircle, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -78,6 +78,26 @@ const Footer = () => {
                 <Linkedin className="w-4 h-4" />
                 LinkedIn
               </a>
+
+              <a
+                href="https://www.linkedin.com/in/ritish/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-foreground/60 hover:text-flow-cyan transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                About Me
+              </a>
+
+              <a
+                href="https://www.instagram.com/neu.roads/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-foreground/60 hover:text-flow-cyan transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+                Instagram
+              </a>
             </div>
           </div>
         </div>
@@ -106,7 +126,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-foreground/50 text-xs tracking-wide">
-              © 2025 Neural Ads. All rights reserved.
+              © 2026 Neural Ads. All rights reserved.
             </p>
           </div>
         </div>
