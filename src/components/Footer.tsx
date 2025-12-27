@@ -106,7 +106,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-foreground/50 text-xs tracking-wide">
-              © 2025 Neural Ads. All rights reserved.
+              © 2026 Neural Ads. All rights reserved.
             </p>
           </div>
         </div>
