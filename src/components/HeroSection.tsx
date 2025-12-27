@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="text-center mb-12 sm:mb-16">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mx-auto mb-12 sm:mb-16 max-w-4xl leading-relaxed text-foreground/90 px-4">
             If your ads feel less effective than they used to, it's not your creatives, copy, team — it's the system you're using.
-            This short breakdown reveals what's changed in 2025, and how leading brands are adapting.
+            This short breakdown reveals what's changed in 2026, and how leading brands are adapting.
           </p>
 
           {/* Video embed */}
