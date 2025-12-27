@@ -66,48 +66,21 @@ const Footer = () => {
           </div>
           
           {/* Social */}
-{/* Social */}
-<div className="space-y-4">
-  <h3 className="text-sm font-semibold text-foreground/90 tracking-wide">
-    Connect
-  </h3>
-
-  <div className="flex flex-col space-y-3 text-sm">
-    {/* Company LinkedIn */}
-    <a 
-      href="https://www.linkedin.com/company/neuro-ads"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-foreground/60 hover:text-flow-cyan transition-colors"
-    >
-      <Linkedin className="w-4 h-4" />
-      LinkedIn
-    </a>
-
-    {/* Personal LinkedIn */}
-    <a 
-      href="https://www.linkedin.com/in/ritish/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-foreground/60 hover:text-flow-cyan transition-colors"
-    >
-      <Linkedin className="w-4 h-4" />
-      About Me
-    </a>
-
-    {/* Instagram */}
-    <a 
-      href="https://www.instagram.com/neu.roads/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-foreground/60 hover:text-flow-cyan transition-colors"
-    >
-      <Instagram className="w-4 h-4" />
-      Instagram
-    </a>
-  </div>
-</div>
-
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold text-foreground/90 tracking-wide">Connect</h3>
+            <div className="flex flex-col space-y-3 text-sm">
+              <a 
+                href="https://www.linkedin.com/company/neuro-ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-foreground/60 hover:text-flow-cyan transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
         
         {/* Legal & Disclaimers */}
         <div className="border-t border-border/20 pt-8 space-y-6">
@@ -133,7 +106,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-foreground/50 text-xs tracking-wide">
-              © 2026 Neural Ads. All rights reserved.
+              © 2025 Neural Ads. All rights reserved.
             </p>
           </div>
         </div>
