@@ -1,17 +1,24 @@
 import { NeuralButton } from "@/components/ui/neural-button";
 import businessIcons from "@/assets/business-icons.jpg";
 
+// Import featured logos
+import sharkTankLogo from "@/assets/featured-sharktank.png";
+import forbesLogo from "@/assets/featured-forbes.png";
+import townCountryLogo from "@/assets/featured-townandcountry.png";
+import mintLogo from "@/assets/featured-mint.png";
+import wsjLogo from "@/assets/featured-wsj.png";
+import vogueLogo from "@/assets/featured-vogue.png";
+import lakmeLogo from "@/assets/featured-lakme.png";
+
 const CaseStudiesSection = () => {
-  const featuredIn = [
-    "Shark Tank",
-    "Forbes",
-    "Lovemint",
-    "Wall Street Journal",
-    "Vogue",
-    "Town and Country",
-    "Glossy",
-    "Oscars 2023",
-    "Lakme Fashion Week"
+  const featuredLogos = [
+    { name: "Shark Tank", logo: sharkTankLogo },
+    { name: "Forbes", logo: forbesLogo },
+    { name: "Mint", logo: mintLogo },
+    { name: "Wall Street Journal", logo: wsjLogo },
+    { name: "Vogue", logo: vogueLogo },
+    { name: "Town and Country", logo: townCountryLogo },
+    { name: "Lakme Fashion Week", logo: lakmeLogo },
   ];
 
   return (
@@ -46,19 +53,22 @@ const CaseStudiesSection = () => {
 
           {/* Featured In */}
           <div className="mb-12 sm:mb-14 md:mb-16">
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-6 sm:mb-8 text-foreground/70 uppercase tracking-wider">
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-8 sm:mb-10 text-foreground/70 uppercase tracking-wider">
               Clients Featured In
             </h3>
             
-            <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-5">
-              {featuredIn.map((name, index) => (
+            {/* Logo Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 sm:gap-8 items-center justify-items-center max-w-6xl mx-auto">
+              {featuredLogos.map((item, index) => (
                 <div
                   key={index}
-                  className="px-3 sm:px-5 py-2 sm:py-3 bg-background/40 border border-border/20 rounded-lg hover:border-flow-cyan/30 transition-all duration-300 backdrop-blur-sm"
+                  className="flex items-center justify-center w-full h-16 sm:h-20 md:h-24 opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0"
                 >
-                  <span className="text-xs sm:text-sm font-medium text-foreground/60 whitespace-nowrap">
-                    {name}
-                  </span>
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                    className="max-h-full max-w-full w-auto h-auto object-contain"
+                  />
                 </div>
               ))}
             </div>
